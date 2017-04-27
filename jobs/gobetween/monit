@@ -1,0 +1,5 @@
+check process gobetween
+  with pidfile /var/vcap/sys/run/gobetween/gobetween.pid
+  start program "/var/vcap/jobs/gobetween/bin/monit_debugger gobetween_ctl '/var/vcap/jobs/gobetween/bin/ctl start'"
+  stop program "/var/vcap/jobs/gobetween/bin/monit_debugger gobetween_ctl '/var/vcap/jobs/gobetween/bin/ctl stop'"
+  group vcap

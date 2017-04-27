@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source /var/vcap/jobs/gobetween/helpers/ctl_setup.sh 'gobetween'
+
+echo "<%= properties.dump_crontime %> vcap /var/vcap/jobs/gobetween/bin/dump" > /etc/cron.d/gobetween
+
+<% if properties.wipe %>
+  rm /var/vcap/store/gobetween/gobetween.toml
+<% end %>
+
+
+if [ ! -f "/var/vcap/store/gobetween/gobetween.toml" ]
+then
+  cp /var/vcap/jobs/gobetween/config/gobetween.toml /var/vcap/store/gobetween/gobetween.toml
+  chown -R vcap:vcap /var/vcap/store/gobetween/gobetween.toml
+fi

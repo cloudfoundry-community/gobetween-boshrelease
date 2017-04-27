@@ -1,0 +1,7 @@
+set -ex
+
+VERSION=0.4.0
+
+tar -xzvf gobetween/gobetween_${VERSION}_linux_amd64.tar.gz
+mkdir -p ${BOSH_INSTALL_TARGET}/bin
+cp gobetween_${VERSION}_linux_amd64/gobetween ${BOSH_INSTALL_TARGET}/bin

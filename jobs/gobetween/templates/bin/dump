@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -u <%= properties.admin.username %>:<%= properties.admin.username %> http://localhost:<%= properties.admin.port %>/dump > /var/vcap/store/gobetween/gobetween.toml

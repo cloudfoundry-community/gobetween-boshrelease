@@ -1,0 +1,40 @@
+---
+name: gobetween
+packages:
+- gobetween
+templates:
+  bin/ctl: bin/ctl
+  bin/pre-start: bin/pre-start
+  bin/dump: bin/dump
+  bin/monit_debugger: bin/monit_debugger
+  config/gobetween.toml.erb: config/gobetween.toml
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+
+provides:
+- name: gobetween
+  type: conn
+  properties:
+  - admin.port
+  - admin.username
+  - admin.password
+
+properties:
+  admin.port:
+    description: "Port for admin api"
+    default: 8888
+  admin.username:
+    description: "Username for admin api"
+    default: admin
+  admin.password:
+    description: "Password for admin api"
+    default: admin
+  wipe:
+    description: "Wipe current config - needed if admin changes are needed"
+    default: false
+
+  dump_crontime:
+    description: "How often to dump gobetween and save config"
+    default: "*/15 * * * *"
