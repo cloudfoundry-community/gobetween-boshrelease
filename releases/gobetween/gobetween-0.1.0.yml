@@ -1,0 +1,20 @@
+---
+packages:
+- name: gobetween
+  version: 6764fda46e00e14036428effe1591db714273381
+  fingerprint: 6764fda46e00e14036428effe1591db714273381
+  sha1: 6d113e3690b97eb30b37850c2738349c00925365
+  dependencies: []
+jobs:
+- name: gobetween
+  version: ace76c4e26169dd33b2cc608e105699cc7695935
+  fingerprint: ace76c4e26169dd33b2cc608e105699cc7695935
+  sha1: 37b4df97343cfa2de9239e4df478a5de8b77249b
+license:
+  version: 06c47f6ad4218af73b6f9ea573cc93a3f351c51c
+  fingerprint: 06c47f6ad4218af73b6f9ea573cc93a3f351c51c
+  sha1: 6956446d630415dd0bcec4ddc95f8feb894b3711
+commit_hash: ff485a45
+uncommitted_changes: true
+name: gobetween
+version: 0.1.0
